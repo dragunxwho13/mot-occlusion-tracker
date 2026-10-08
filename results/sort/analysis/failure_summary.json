@@ -1,0 +1,72 @@
+{
+  "num_switches": 812,
+  "primary": {
+    "occlusion": 602,
+    "occlusion + similar appearance": 20,
+    "long occlusion (> buffer)": 168,
+    "similar appearance": 0,
+    "fast motion": 8,
+    "other (detector jitter / missed det)": 14
+  },
+  "flags": {
+    "occlusion": 790,
+    "long_occlusion": 168,
+    "fast_motion": 114,
+    "similar_appearance": 24,
+    "transfer": 51,
+    "new_track": 749
+  },
+  "per_seq": {
+    "MOT17-02-FRCNN": {
+      "fast motion": 0,
+      "long occlusion (> buffer)": 53,
+      "occlusion": 69,
+      "occlusion + similar appearance": 0,
+      "other (detector jitter / missed det)": 1
+    },
+    "MOT17-04-FRCNN": {
+      "fast motion": 0,
+      "long occlusion (> buffer)": 41,
+      "occlusion": 163,
+      "occlusion + similar appearance": 0,
+      "other (detector jitter / missed det)": 0
+    },
+    "MOT17-05-FRCNN": {
+      "fast motion": 0,
+      "long occlusion (> buffer)": 5,
+      "occlusion": 91,
+      "occlusion + similar appearance": 14,
+      "other (detector jitter / missed det)": 12
+    },
+    "MOT17-09-FRCNN": {
+      "fast motion": 0,
+      "long occlusion (> buffer)": 9,
+      "occlusion": 37,
+      "occlusion + similar appearance": 2,
+      "other (detector jitter / missed det)": 0
+    },
+    "MOT17-10-FRCNN": {
+      "fast motion": 0,
+      "long occlusion (> buffer)": 30,
+      "occlusion": 130,
+      "occlusion + similar appearance": 2,
+      "other (detector jitter / missed det)": 1
+    },
+    "MOT17-11-FRCNN": {
+      "fast motion": 0,
+      "long occlusion (> buffer)": 10,
+      "occlusion": 24,
+      "occlusion + similar appearance": 0,
+      "other (detector jitter / missed det)": 0
+    },
+    "MOT17-13-FRCNN": {
+      "fast motion": 8,
+      "long occlusion (> buffer)": 20,
+      "occlusion": 88,
+      "occlusion + similar appearance": 2,
+      "other (detector jitter / missed det)": 0
+    }
+  },
+  "median_gap": 10.0,
+  "median_min_vis": 0.44033
+}

@@ -73,7 +73,7 @@ Every time a ground-truth person stopped being tracked and was later tracked aga
 | 30-59          | 5/104 (5%)    | 24/93 (26%)     | 26/65 (40%)    |
 | 60+            | 0/76 (0%)     | 0/59 (0%)       | 2/46 (4%)      |
 
-![recovery](results/occlusion_recovery.png)
+![recovery](occlusion_recovery.png)
 
 ## 4. Failure analysis: where do ID switches happen?
 
@@ -91,17 +91,17 @@ Each ID switch of the full tracker is matched back to the last frame the person 
 
 Of 1285 switches, 639 (50%) involve occlusion, 106 (8%) fast motion and 142 (11%) an identity exchange between similar-looking people (flags overlap). 925 are *exchanges* between two people and 112 are a new ID spawned for the same person. The most common primary cause is **other (detector jitter / missed det)**; the median switch follows a 0-frame gap with minimum visibility 0.70.
 
-![causes](results/full/analysis/id_switch_causes.png)
+![causes](full/analysis/id_switch_causes.png)
 
-Examples (left: last correct frame, right: the switch) — [switches_MOT17-02-FRCNN](results/full/analysis/switches_MOT17-02-FRCNN.png), [switches_MOT17-04-FRCNN](results/full/analysis/switches_MOT17-04-FRCNN.png), [switches_MOT17-05-FRCNN](results/full/analysis/switches_MOT17-05-FRCNN.png), [switches_MOT17-09-FRCNN](results/full/analysis/switches_MOT17-09-FRCNN.png), [switches_MOT17-10-FRCNN](results/full/analysis/switches_MOT17-10-FRCNN.png), [switches_MOT17-11-FRCNN](results/full/analysis/switches_MOT17-11-FRCNN.png), [switches_MOT17-13-FRCNN](results/full/analysis/switches_MOT17-13-FRCNN.png).
+Examples (left: last correct frame, right: the switch) — [switches_MOT17-02-FRCNN](full/analysis/switches_MOT17-02-FRCNN.png), [switches_MOT17-04-FRCNN](full/analysis/switches_MOT17-04-FRCNN.png), [switches_MOT17-05-FRCNN](full/analysis/switches_MOT17-05-FRCNN.png), [switches_MOT17-09-FRCNN](full/analysis/switches_MOT17-09-FRCNN.png), [switches_MOT17-10-FRCNN](full/analysis/switches_MOT17-10-FRCNN.png), [switches_MOT17-11-FRCNN](full/analysis/switches_MOT17-11-FRCNN.png), [switches_MOT17-13-FRCNN](full/analysis/switches_MOT17-13-FRCNN.png).
 
 **Interpretation.** 82 switches follow occlusions longer than the 30-frame buffer: the track had already been deleted, so a new ID was unavoidable for an online tracker with this buffer (a longer buffer trades these for more false re-identifications). 557 happen while people overlap each other: when two people cross, both Kalman predictions sit on the same detections and the detector often returns one merged box. Fast motion is the primary cause of 18 switches -- at 30 fps a walking person moves well under a tenth of their height per frame, so the motion model rarely loses them; CMC handles the moving-camera case. Similar-looking people are involved in 142 switch(es) -- the residual failure a colour histogram cannot resolve. The natural next step is a learned re-ID embedding (e.g. OSNet trained on Market-1501) plugged into `appearance.py`, which would also allow a longer LOST buffer without more false re-identifications.
 
 ## 5. Visualisation
 
-`results/viz/MOT17-04-FRCNN_tracks.mp4` — frames 1-300 of MOT17-04-FRCNN: boxes, IDs and trajectory tails; dashed boxes are positions filled in while the person was occluded. `results/viz_sort/MOT17-04-FRCNN_tracks.mp4` is the SORT baseline on the same clip for comparison.
+`viz/MOT17-04-FRCNN_tracks.mp4` — frames 1-300 of MOT17-04-FRCNN: boxes, IDs and trajectory tails; dashed boxes are positions filled in while the person was occluded. `viz_sort/MOT17-04-FRCNN_tracks.mp4` is the SORT baseline on the same clip for comparison.
 
-![trajectories](results/viz/MOT17-04-FRCNN_trajectories.png)
+![trajectories](viz/MOT17-04-FRCNN_trajectories.png)
 
 
 _Pipeline runtime: 26.0 min (excluding detection if it was cached)._
