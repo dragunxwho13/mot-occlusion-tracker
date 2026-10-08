@@ -24,7 +24,7 @@ A COCO-pretrained YOLO11 detector feeds an online tracker that grows from **SORT
 Python 3.9 – 3.13. A GPU is optional (CPU works, just slower).
 
 ```bash
-git clone <this-repo-url> mot-occlusion-tracker
+git clone https://github.com/dragunxwho13/mot-occlusion-tracker.git
 cd mot-occlusion-tracker
 python -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
