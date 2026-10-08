@@ -1,0 +1,11 @@
+seq,frame,gt_id,old_hid,new_hid,prev_frame,gap,min_vis,crowd_iou,other_gt,speed,transfer,app_sim,new_track,occlusion,long_occlusion,fast_motion,similar_appearance,primary
+SYNTH-01,219,3,3,5,200,18,0.627,0.09375112681642808,1,0.01948051948051948,False,0.7069919109344482,True,True,False,False,False,occlusion
+SYNTH-01,221,3,5,3,220,0,0.901,0.09158474314477294,1,0.020668481439009016,False,0.6889362335205078,False,False,False,False,False,other (detector jitter / missed det)
+SYNTH-01,251,1,1,2,250,0,0.417,0.4721704394141145,2,0.01750264309867692,True,0.8543959856033325,False,True,False,False,True,occlusion + similar appearance
+SYNTH-01,251,2,2,1,249,1,1.0,0.5756470185839699,1,0.015425744683748193,True,0.8543959856033325,False,True,False,False,True,occlusion + similar appearance
+SYNTH-01,373,4,4,11,143,229,0.0,0.3639371381306865,1,0.009300816647554057,False,0.5427489876747131,True,True,True,False,False,long occlusion (> buffer)
+SYNTH-01,404,7,10,13,391,12,0.0,0.12131277184657968,5,0.06352465845169858,False,0.5095677375793457,True,True,False,False,False,occlusion
+SYNTH-01,492,4,11,20,413,78,0.06,0.8426377917813083,10,0.01108482502954953,False,0.7891659736633301,True,True,True,False,False,long occlusion (> buffer)
+SYNTH-01,528,6,8,22,521,6,1.0,0.3945850319206215,8,0.016829002553541472,False,0.780125617980957,True,True,False,False,False,occlusion
+SYNTH-01,538,8,15,23,530,7,0.306,0.5174069126732342,6,0.014180617310172106,False,0.7488952279090881,True,True,False,False,False,occlusion
+SYNTH-01,543,9,16,24,542,0,0.79,0.26976664758058844,10,0.01386963886038763,False,0.8329270482063293,True,False,False,False,False,other (detector jitter / missed det)

@@ -1,0 +1,62 @@
+{
+  "config": {
+    "high_thresh": 0.5,
+    "low_thresh": 0.1,
+    "new_track_thresh": 0.6,
+    "match_thresh": 0.8,
+    "low_match_thresh": 0.5,
+    "tentative_match_thresh": 0.7,
+    "max_age": 30,
+    "n_init": 2,
+    "use_low_dets": true,
+    "use_appearance": true,
+    "appearance_thresh": 0.25,
+    "proximity_thresh": 0.5,
+    "reid_gate": true,
+    "gate_inflation": 4.0,
+    "motion_weight": 0.2,
+    "ema_alpha": 0.9,
+    "feat_update_max_overlap": 0.3,
+    "use_cmc": true,
+    "freeze_size_when_lost": true
+  },
+  "appearance": "hist",
+  "detector": {
+    "detector": "yolo",
+    "weights": "weights/yolo11m.pt",
+    "imgsz": 1280,
+    "cache_dir": "results_synth/cache_dets",
+    "device": null
+  },
+  "sequences": {
+    "SYNTH-01": {
+      "tracker_fps": 101.6,
+      "num_ids": 14,
+      "reid_events": 21,
+      "reid_by_appearance": 20,
+      "reid_gaps": [
+        7,
+        3,
+        1,
+        5,
+        7,
+        13,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        12,
+        2,
+        3
+      ]
+    }
+  }
+}

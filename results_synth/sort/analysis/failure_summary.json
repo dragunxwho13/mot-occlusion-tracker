@@ -1,0 +1,28 @@
+{
+  "num_switches": 10,
+  "primary": {
+    "occlusion": 7,
+    "occlusion + similar appearance": 0,
+    "long occlusion (> buffer)": 2,
+    "similar appearance": 0,
+    "fast motion": 0,
+    "other (detector jitter / missed det)": 1
+  },
+  "flags": {
+    "occlusion": 9,
+    "long_occlusion": 2,
+    "fast_motion": 0,
+    "similar_appearance": 0,
+    "transfer": 0,
+    "new_track": 10
+  },
+  "per_seq": {
+    "SYNTH-01": {
+      "long occlusion (> buffer)": 2,
+      "occlusion": 7,
+      "other (detector jitter / missed det)": 1
+    }
+  },
+  "median_gap": 8.5,
+  "median_min_vis": 0.2995
+}

@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# datasets and weights are downloaded, not committed
+data/MOT17/
+data/MOT20/
+data/SYNTH/
+*.zip
+*.pt
+
+# heavy / regenerable run artefacts (reports, tables, figures and videos ARE committed)
+**/cache_dets/
+**/events_*.csv
+run_*.log
