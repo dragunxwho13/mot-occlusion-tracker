@@ -5,7 +5,7 @@ A COCO-pretrained YOLO11 detector feeds an online tracker that grows from **SORT
 
 ![tracking demo](docs/demo.gif)
 
-*Demo above: the synthetic occlusion smoke-test clip (`results_synth/`). `run_all.py` replaces it with your MOT17 clip automatically.*
+*Demo: MOT17-04, frames 1-300, full tracker (dashed boxes = positions filled in while the person was occluded).*
 
 | Requirement from the brief | Where |
 |---|---|
